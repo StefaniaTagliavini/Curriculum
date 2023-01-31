@@ -241,7 +241,7 @@ p{
     justify-content: center;
     background-color: var(--color-bg2);
     margin: 1rem 0;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .profile-links li{
@@ -251,18 +251,23 @@ p{
 
 #profile-candles{ 
     cursor: pointer;
-    color: var(--color-success);
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     transition: var(--transition);
 }
 
 #profile-candles:hover{
     transform: scale(2);
-    color: yellow;
 }
 
 #profile-location{
     cursor: pointer;
-    color: var(--color-warning);
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     transition: var(--transition);
 }
 #profile-location:hover{
@@ -270,7 +275,10 @@ p{
 }
 #profile-phone{
     cursor: pointer;
-    color: var(--color-danger);
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     transition: var(--transition);
 }
 #profile-phone:hover{
@@ -278,7 +286,10 @@ p{
 }
 #profile-email{
     cursor: pointer;
-    color: var(--color-danger);
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     transition: var(--transition);
 }
 #profile-email:hover{
@@ -286,7 +297,10 @@ p{
 }
 #profile-linkedin{
     cursor: pointer;
-    color:var(--color-black);
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
     transition: var(--transition);
 }
 #profile-linkedin:hover{
@@ -643,6 +657,11 @@ p{
         width: 100vw;
      }
 
+    .profile-links li{
+        display: inline-block;
+        margin: 1rem;
+    }
+
      .descrizione{
         border-radius: 0%;
         margin-left: 0;
@@ -681,12 +700,6 @@ p{
         width: 100vw;
     }
 
-
-    acquariofilia{
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 2rem 0 0;
-    }
     
     .videogiochi,
     .lettura,
