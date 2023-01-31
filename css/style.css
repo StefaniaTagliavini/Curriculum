@@ -681,7 +681,7 @@ p{
         border-right: 2px solid #d1d5db;
         margin-left: 1rem;
         /* Positioned at the left */
-        left: 0.70rem;
+        left: 1.2rem;
         position: absolute;
         top: 0px;
         /* Take full height */
@@ -691,7 +691,7 @@ p{
     .timeline__items {
         /* Reset styles */
         list-style-type: none;
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         padding: 0px;
     }
 
