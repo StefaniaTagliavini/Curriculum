@@ -693,19 +693,20 @@ p{
         list-style-type: none;
         margin-left: 1rem;
         padding: 0px;
-    
     }
 
     .container-middle{
         width: 100vw;
     }
 
+    .panoramica{
+        padding: 0.3rem;
+    }
     
     .videogiochi,
     .lettura,
     .cinema,
-    .acquariofilia{
-       
+    .acquariofilia{ 
         margin: 0 1rem;
     }
     
