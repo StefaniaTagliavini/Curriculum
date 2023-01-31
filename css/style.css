@@ -660,8 +660,32 @@ p{
     .profile-links li{
         display: inline-block;
         margin: 1rem;
+        font-size: 1.5rem;
     }
 
+    
+    #profile-candles:hover{
+        transform: scale(1);
+    }
+    
+    
+    #profile-location:hover{
+        transform: scale(1);
+    }
+  
+    #profile-phone:hover{
+        transform: scale(1);
+    }
+    
+    #profile-email:hover{
+        transform: scale(1);
+    }
+    
+    #profile-linkedin:hover{
+        transform: scale(1);
+    }
+
+    
      .descrizione{
         border-radius: 0%;
         margin-left: 0;
