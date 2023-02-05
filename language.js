@@ -36,55 +36,6 @@ const intvideogiochiEl = document.querySelector('.intvideogiochi');
 const intletturaEl = document.querySelector('.intlettura');
 const intacquarioEl = document.querySelector('.intacquario');
 
-
-languageButton.forEach(el => {
-    el.addEventListener('click', () => {
-        langEl.querySelector('.linguaActive').classList.remove('linguaActive');
-        el.classList.add('linguaActive');
-        const attr = el.getAttribute('language');
-        //Bisogna inserire il codice per ogni classe per rendere le traduzioni effettive
-        //Copiare e incollare cambiando il nome prima di El.textContent .. e poi cambiare la classe prima del ; PER OGNI COSA CHE SI VUOLE TRADURRE!!!!!!! 
-        //quest'ultimo è la classe che abbiamo dato per la traduzione
-        //selfDescriptionEl->const definite sopra, string[attr].selfDescription-> selfDescription nome dato dentro a strings
-        selfDescriptionEl.textContent = strings[attr].selfDescription;
-        panoramicEl.textContent = strings[attr].panoramic;
-        languagesEl.textContent = strings[attr].languages;
-        ingleseEl.textContent = strings[attr].inglese;
-        coreanoEl.textContent = strings[attr].coreano;
-        franceseEl.textContent = strings[attr].francese;
-        tedescoEl.textContent = strings[attr].tedesco;
-        esperienzelavorativeEl.textContent = strings[attr].esperienzelavorative;
-        segretariaEl.textContent = strings[attr].segretaria;
-        accoglienzaEl.textContent = strings[attr].accoglienza;
-        gestioneEl.textContent = strings[attr].gestione;
-        organizzazioneEl.textContent = strings[attr].organizzazione;
-        utilizzoEl.textContent = strings[attr].utilizzo;
-        lavoroEl.textContent = strings[attr].lavoro;
-        coordinamentoEl.textContent = strings[attr].coordinamento;
-        collaborazioneEl.textContent = strings[attr].collaborazione;
-        formazioneEl.textContent = strings[attr].formazione;
-        laureaEl.textContent = strings[attr].laurea;
-        universitàEl.textContent = strings[attr].università;
-        diplomaEl.textContent = strings[attr].diploma;
-        corsiEl.textContent = strings[attr].corsi;
-        socialmediaEl.textContent = strings[attr].socialmedia;
-        ricercaEl.textContent = strings[attr].ricerca;
-        advEl.textContent = strings[attr].adv;
-        ottimizzazioneEl.textContent = strings[attr].ottimizzazione;
-        analyticsEl.textContent = strings[attr].analytics;
-        htmlandcssEl.textContent = strings[attr].htmlandcss;
-        bootstrapEl.textContent = strings[attr].bootstrap;
-        sqlEl.textContent = strings[attr].sql;
-        hobbyEl.textContent = strings[attr].hobby;
-        intvideogiochiEl.textContent = strings[attr].intvideogiochi;
-        intletturaEl.textContent = strings[attr].intlettura;
-        intacquarioEl.textContent = strings[attr].intacquario;
-
-
-
-    });
-});
-
 var strings = {
     "italian":
     {
@@ -159,8 +110,69 @@ var strings = {
         "intvideogiochi": "Videogames",
         "intlettura": "Reading",
         "intacquario": "Aquarium",
-
-
     }
+}
 
+if (localStorage.getItem('lang') === null) {
+    localStorage.setItem('lang', "italian");
+}
+
+checkLang()
+
+function checkLang() {
+    if (localStorage.getItem('lang') === "english") {
+        langEl.querySelector('.linguaActive').classList.remove('linguaActive');
+        document.getElementById('english').classList.add('linguaActive');
+        setTranslatedStrings("english");
+    }
+}
+
+languageButton.forEach(el => {
+    el.addEventListener('click', () => {
+        langEl.querySelector('.linguaActive').classList.remove('linguaActive');
+        el.classList.add('linguaActive');
+        const attr = el.getAttribute('language');
+        localStorage.setItem('lang', attr);
+        setTranslatedStrings(attr);
+    });
+});
+
+function setTranslatedStrings(attr) {
+    //Bisogna inserire il codice per ogni classe per rendere le traduzioni effettive
+        //Copiare e incollare cambiando il nome prima di El.textContent .. e poi cambiare la classe prima del ; PER OGNI COSA CHE SI VUOLE TRADURRE!!!!!!! 
+        //quest'ultimo è la classe che abbiamo dato per la traduzione
+        //selfDescriptionEl->const definite sopra, string[attr].selfDescription-> selfDescription nome dato dentro a strings
+        selfDescriptionEl.textContent = strings[attr].selfDescription;
+        panoramicEl.textContent = strings[attr].panoramic;
+        languagesEl.textContent = strings[attr].languages;
+        ingleseEl.textContent = strings[attr].inglese;
+        coreanoEl.textContent = strings[attr].coreano;
+        franceseEl.textContent = strings[attr].francese;
+        tedescoEl.textContent = strings[attr].tedesco;
+        esperienzelavorativeEl.textContent = strings[attr].esperienzelavorative;
+        segretariaEl.textContent = strings[attr].segretaria;
+        accoglienzaEl.textContent = strings[attr].accoglienza;
+        gestioneEl.textContent = strings[attr].gestione;
+        organizzazioneEl.textContent = strings[attr].organizzazione;
+        utilizzoEl.textContent = strings[attr].utilizzo;
+        lavoroEl.textContent = strings[attr].lavoro;
+        coordinamentoEl.textContent = strings[attr].coordinamento;
+        collaborazioneEl.textContent = strings[attr].collaborazione;
+        formazioneEl.textContent = strings[attr].formazione;
+        laureaEl.textContent = strings[attr].laurea;
+        universitàEl.textContent = strings[attr].università;
+        diplomaEl.textContent = strings[attr].diploma;
+        corsiEl.textContent = strings[attr].corsi;
+        socialmediaEl.textContent = strings[attr].socialmedia;
+        ricercaEl.textContent = strings[attr].ricerca;
+        advEl.textContent = strings[attr].adv;
+        ottimizzazioneEl.textContent = strings[attr].ottimizzazione;
+        analyticsEl.textContent = strings[attr].analytics;
+        htmlandcssEl.textContent = strings[attr].htmlandcss;
+        bootstrapEl.textContent = strings[attr].bootstrap;
+        sqlEl.textContent = strings[attr].sql;
+        hobbyEl.textContent = strings[attr].hobby;
+        intvideogiochiEl.textContent = strings[attr].intvideogiochi;
+        intletturaEl.textContent = strings[attr].intlettura;
+        intacquarioEl.textContent = strings[attr].intacquario;
 }

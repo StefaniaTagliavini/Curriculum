@@ -20,7 +20,8 @@
     --color-bg2: #fff;
     --color-active: #B895BD;
     --color-navbaricons: #474c60;
-
+    --color-moon: #474c60;
+    --color-sun: #B895BD;
     --container-width-lg: 64%;
     --container-width-sm: 100%;
 
@@ -34,15 +35,20 @@
     --color-bg2:#212121;
     --color-active: #B895BD;
     --color-navbaricons: lightgrey;
+    --color-moon: #B895BD;
+    --color-sun: lightgrey;
 }
-
 
 .lingua li button.linguaActive{
     color: var(--color-active);
 }
 
-.mode li button.modeActive{
-    color: var(--color-active);
+.fa-moon {
+    color: var(--color-moon);
+}
+
+.fa-sun{
+    color: var(--color-sun);
 }
 
 body{
