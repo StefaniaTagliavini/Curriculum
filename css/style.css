@@ -1,0 +1,744 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;  
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+    
+:root{
+    --color-primary: #474c60;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-white: #fff;
+    --color-grey: #f4f4f4;
+    --color-black: #000;
+    --color-bg: #fff;
+    --color-bg1: #ebded8;
+    --color-bg2: #fff;
+    --color-active: #B895BD;
+    --color-navbaricons: #474c60;
+    --color-moon: #474c60;
+    --color-sun: #B895BD;
+    --container-width-lg: 64%;
+    --container-width-sm: 100%;
+
+    --transition: all 400ms ease;
+}
+
+.dark-mode{
+    --color-primary: #f4f3ee;
+    --color-bg: #212121;
+    --color-bg1:#605467;
+    --color-bg2:#212121;
+    --color-active: #B895BD;
+    --color-navbaricons: lightgrey;
+    --color-moon: #B895BD;
+    --color-sun: lightgrey;
+}
+
+.lingua li button.linguaActive{
+    color: var(--color-active);
+}
+
+.fa-moon {
+    color: var(--color-moon);
+}
+
+.fa-sun{
+    color: var(--color-sun);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+h1{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+h2{
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+h3{
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+h4{
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+h5{
+    font-size: 1rem;
+    color: var(--color-primary);
+}    
+
+p{
+    color: var(--color-primary);
+}
+
+.container-nav{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    /* Layout the left sidebar and main content  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg1);
+    border-radius: 0px 0px 20px 20px;
+    justify-content: center;
+    
+}
+.navbar header ul li{
+    margin: 0 1rem;
+    justify-content: space-between;
+    display: inline-block;
+}
+
+.navbar header ul li button{ 
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--color-navbaricons); 
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.navbar header ul li button:hover{
+    transform: scale(1.3);
+}
+
+.container-max{
+    width: var(--container-width-lg);
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+ }
+
+ .left-profile{
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Border */
+    border: 1px solid var(--color-bg1);
+    border-radius: 1rem;
+    background-color: var(--color-bg1);
+ }
+
+ .foto-profilo img{
+    margin: 1rem 0;
+    width:15rem;
+    height:15rem;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+ .descrizione-profilo{
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: auto;
+ }
+
+
+ .descrizione-profilo h2{
+    color: var(--color-primary);
+    margin: 1rem;
+ }
+
+ .horizontal-line{
+    border: solid 1px var(--color-primary);
+    background-color: var(--color-primary);
+    width: 95%;    
+}
+
+.descrizione-profilo h5{
+    color: var(--color-primary);
+    margin: 1rem;
+}
+
+/* questo determina la grandezza dei contenitori della descrizione profilo*/
+.mini-container-left{
+    width: 80%;
+}
+
+/* nascondere la descrizione profile-links*/
+.hide{
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-nascosto-compleanno {
+    /* Position it right below the trigger element */
+    left: 20;
+   
+    position: absolute;
+    bottom: 105%;
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    padding: 0.4rem;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.dropdown-nascosto-mappa {
+    /* Position it right below the trigger element */
+    left: 20;
+   
+    position: absolute;
+    bottom: 105%;
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    padding: 0.4rem;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.dropdown-nascosto-tel {
+    /* Position it right below the trigger element */
+    left: 70;
+    position: absolute;
+    bottom: 105%;
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    padding: 0.4rem;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+/* nascondere la descrizione profile-links*/
+
+.profile-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg2);
+    margin: 1rem 0;
+    border-radius: 15px;
+}
+
+.profile-links li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+#profile-candles{ 
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: var(--transition);
+}
+
+#profile-candles:hover{
+    transform: scale(2);
+}
+
+#profile-location{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: var(--transition);
+}
+#profile-location:hover{
+    transform: scale(2);
+}
+#profile-phone{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: var(--transition);
+}
+#profile-phone:hover{
+    transform: scale(2);
+}
+#profile-email{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: var(--transition);
+}
+#profile-email:hover{
+    transform: scale(2);
+}
+#profile-linkedin{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: var(--transition);
+}
+#profile-linkedin:hover{
+    transform: scale(2);
+}
+
+.panoramica{
+    margin: 1rem 0;
+    border: 1px solid var(--color-bg1);
+    border-radius: 1rem;
+    background-color: var(--color-bg2);
+    min-width: fit-content;
+}
+
+.panoramica p{
+    padding: 1rem;
+    text-align: center;
+}
+
+.panoramica h4{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lingue{
+    margin: 1rem 0;
+    border: 1px solid var(--color-bg1);
+    border-radius: 1rem;
+    background-color: var(--color-bg2);
+    padding-bottom: 0.9rem;
+}
+
+.lingue h4{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.lingue ul li{
+    padding: 0 1rem;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.software{
+    margin: 1rem 0;
+    border: 1px solid var(--color-bg1);
+    border-radius: 1rem;
+    background-color: var(--color-bg2);
+    padding-bottom: 0.9rem;
+}
+
+.software h4{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.software-column h5,
+.software-column li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     color: var(--color-primary);
+}
+
+.software-column h5{
+    margin-bottom: 0.2rem;
+}
+
+.software-column{
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    justify-content: space-between;
+}
+
+
+/* ========= left end ========= */
+
+/* ========= middle ========= */
+    
+.timeline {
+    /* Used to position the left vertical line */
+    position: relative;
+}
+
+.timeline__line {
+    /* Border */
+    border-right: 2px solid #d1d5db;
+    margin-left: 1rem;
+    /* Positioned at the left */
+    left: 1.70rem;
+    position: absolute;
+    top: 0px;
+    /* Take full height */
+    height: 100%;
+}
+
+.timeline__items {
+    /* Reset styles */
+    list-style-type: none;
+    margin-left: 2rem;
+    padding: 0px;
+}
+
+.timeline__item {
+    margin-bottom: 8px;
+}
+
+.timeline__top {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.timeline__circle {
+    /* Rounded border */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    /* Size */
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.timeline__title {
+    /* Take available width */
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.timeline__title h5{
+    margin-top: .3rem;
+}
+
+.timeline__title p{
+    margin-top: .3rem;
+    max-width: max-content;
+}
+
+.timeline__desc {
+    /* Make it align with the title */
+    margin-left: 2rem;
+}
+
+.descrizione{
+    margin: 0 auto 1rem ;
+    background-color: var(--color-bg1);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.descrizione h4{
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+}
+
+.descrizione-attività{
+    margin-top: 0.5rem;
+    margin-left: 1.1rem;
+}
+
+.descrizione-attività li{
+    margin-right: 5rem;
+    color: var(--color-primary);
+}
+
+.descrizione-attività li::marker{
+    content: '●  ';
+    color: var(--color-bg1);
+}
+
+.interessi{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 3rem auto;
+}
+
+.interessi h4{
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+}
+
+
+
+#acquario-icona{
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, rgb(40, 93, 173), rgb(148, 106, 190));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+#gamepad-icona{
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, red, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+#libro-icona{
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, rebeccapurple, rgb(40, 93, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+#cinema-icona{
+    font-size: 2rem;
+    background-image: linear-gradient(45deg,  purple, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+.acquariofilia{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 2rem 0 0;
+}
+
+.videogiochi{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 2rem 0 0;
+}
+
+.lettura{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 2rem 0 0;
+}
+
+.cinema{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 2rem 0 0;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1861px){
+
+.profile-links li{
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.panoramica p{
+    padding: 0rem;
+    text-align: center;
+}
+
+.software h4{
+    margin-bottom: 0;
+}
+
+.software-column h5,
+.software-column li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+.software-column h5{
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+}
+
+.software-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+}
+
+
+@media (max-width: 1128px){
+
+
+    body{
+        width: 100vw;
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    h4{
+        font-size: 1.2rem;
+    }
+
+    .container-nav{
+        width: var(--container-width-sm);
+        gap: 2rem;
+        background-color: var(--color-bg1);
+        width: 100vw;
+    }
+
+    .navbar{
+       background-color: var(--color-bg); 
+       width: 100vw;
+    }
+
+
+    .container-max{
+        width: var(--container-width-sm);
+        margin: 0rem auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100vw;
+     }
+
+     .left-profile{
+        border-radius: 0%;
+        width: 100vw;
+     }
+
+    .profile-links li{
+        display: inline-block;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    
+    #profile-candles:hover{
+        transform: scale(1);
+    }
+    
+    
+    #profile-location:hover{
+        transform: scale(1);
+    }
+  
+    #profile-phone:hover{
+        transform: scale(1);
+    }
+    
+    #profile-email:hover{
+        transform: scale(1);
+    }
+    
+    #profile-linkedin:hover{
+        transform: scale(1);
+    }
+
+    
+     .descrizione{
+        border-radius: 0%;
+        margin-left: 0;
+        width: 100vw;
+     }
+
+     .interessi{
+       margin: auto;
+       margin-bottom: 1rem;
+     }
+
+     .interessi h4{
+        font-size: 0.8rem;
+     }
+
+     .timeline__line {
+        /* Border */
+        border-right: 2px solid #d1d5db;
+        margin-left: 1rem;
+        /* Positioned at the left */
+        left: 1.2rem;
+        position: absolute;
+        top: 0px;
+        /* Take full height */
+        height: 100%;
+    }
+    
+    .timeline__items {
+        /* Reset styles */
+        list-style-type: none;
+        margin-left: 1.5rem;
+        padding: 0px;
+    }
+
+    .container-middle{
+        width: 100vw;
+    }
+
+    .panoramica{
+        padding: 0.3rem;
+    }
+    
+    .videogiochi,
+    .lettura,
+    .cinema,
+    .acquariofilia{ 
+        margin: 0 1rem;
+    }
+    
+}
